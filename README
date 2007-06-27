@@ -1,0 +1,106 @@
+libical
+-------------------------------------------
+Libical is an Open Source implementation of the IETF's iCalendar 
+Calendaring and Scheduling protocols. (RFC 2445, 2446, and 2447). It 
+parses iCal components and provides a C API for manipulating the 
+component properties, parameters, and subcomponents.
+
+Runtime requirements:
+  cygwin-1.5.24-2
+
+Build requirements:
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
+  binutils-20060817-1
+  bison-2.3-1
+  cygport-0.2.11-1
+  flex-2.5.33-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://www.softwarestudio.org/softwarestudio/app.php/libical
+
+Canonical download:
+  http://downloads.sourceforge.net/freeassociation/
+
+-------------------------------------------
+
+Build instructions:
+  unpack libical-0.27-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./libical-0.27-X.cygport all
+
+This will create:
+  /usr/src/libical-0.27-X-src.tar.bz2
+  /usr/src/libical-0.27-X.tar.bz2
+  /usr/src/libical-devel-0.27-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(libical)
+  /usr/bin/cygical-0.dll
+  /usr/bin/cygicalss-0.dll
+  /usr/share/doc/Cygwin/libical-0.27.README
+  /usr/share/doc/libical-0.27/AUTHORS
+  /usr/share/doc/libical-0.27/ChangeLog
+  /usr/share/doc/libical-0.27/INSTALL
+  /usr/share/doc/libical-0.27/NEWS
+  /usr/share/doc/libical-0.27/README
+  /usr/share/doc/libical-0.27/THANKS
+  /usr/share/doc/libical-0.27/TODO
+  /usr/share/libical/zoneinfo/Africa/*
+  /usr/share/libical/zoneinfo/America/*
+  /usr/share/libical/zoneinfo/Antarctica/*
+  /usr/share/libical/zoneinfo/Arctic/*
+  /usr/share/libical/zoneinfo/Asia/*
+  /usr/share/libical/zoneinfo/Atlantic/*
+  /usr/share/libical/zoneinfo/Australia/*
+  /usr/share/libical/zoneinfo/Europe/*
+  /usr/share/libical/zoneinfo/Indian/*
+  /usr/share/libical/zoneinfo/Pacific/*
+  /usr/share/libical/zoneinfo/zones.tab
+
+(libical-devel)
+  /usr/include/ical.h
+  /usr/include/icalcalendar.h
+  /usr/include/icalclassify.h
+  /usr/include/icalcluster.h
+  /usr/include/icaldirset.h
+  /usr/include/icaldirsetimpl.h
+  /usr/include/icalerror.h
+  /usr/include/icalfileset.h
+  /usr/include/icalfilesetimpl.h
+  /usr/include/icalgauge.h
+  /usr/include/icalgaugeimpl.h
+  /usr/include/icalmemory.h
+  /usr/include/icalmessage.h
+  /usr/include/icalset.h
+  /usr/include/icalspanlist.h
+  /usr/include/icalss.h
+  /usr/include/icalssyacc.h
+  /usr/lib/libical.a
+  /usr/lib/libical.dll.a
+  /usr/lib/libical.la
+  /usr/lib/libicalss.a
+  /usr/lib/libicalss.dll.a
+  /usr/lib/libicalss.la
+
+------------------
+
+Port Notes:
+
+----- version 0.27-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
