@@ -1,5 +1,5 @@
 category: Libs
-requires: cygwin libical0
+requires: cygwin libical0 libdb4.0-devel
 external-source: libical
 sdesc: "iCalendar library (development)"
 ldesc: "Libical is an Open Source implementation of the IETF's iCalendar 
