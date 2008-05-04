@@ -1,0 +1,18 @@
+DESCRIPTION="iCalendar calendar/schedule library"
+HOMEPAGE="http://www.softwarestudio.org/softwarestudio/app.php/libical"
+SRC_URI="mirror://sourceforge/freeassociation/${P}.tar.gz"
+
+abi=0
+PKG_NAMES="${PN} ${PN}${abi} ${PN}-devel"
+PKG_HINTS="setup lib devel"
+PKG_CONTENTS[0]='usr/share/doc/'
+PKG_CONTENTS[1]="usr/bin/*-${abi}.dll"
+PKG_CONTENTS[2]='usr/include/ usr/lib/'
+
+DIFF_EXCLUDES="icalsslexer.c"
+
+CYGCONF_ARGS="
+	--enable-cxx
+	--enable-reentrant
+	--with-bdb4 --with-bdb4-dir=/usr
+"

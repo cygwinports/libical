@@ -6,19 +6,21 @@ parses iCal components and provides a C API for manipulating the
 component properties, parameters, and subcomponents.
 
 Runtime requirements:
-  cygwin-1.5.24-2
+  cygwin-1.5.25-11
+  libdb4.0-4.0.14-2
+  tzcode
 
 Build requirements:
-  cygwin-1.5.24-2
   autoconf2.5-2.61-1
   automake1.9-1.9.6-2
   binutils-20060817-1
   bison-2.3-1
-  cygport-0.2.11-1
-  flex-2.5.33-1
-  gawk-3.1.5-4
+  cygport-0.3.9-1
+  flex-2.5.34-1
+  gawk-3.1.6-1
   gcc-core-3.4.4-3
-  libtool1.5-1.5.23a-2
+  gcc-g++-3.4.4-3
+  libtool-2.2.2-2
   make-3.81-1
   sed-4.1.5-2
 
@@ -31,72 +33,110 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libical-0.27-X-src.tar.bz2
+  unpack libical-0.31-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libical-0.27-X.cygport all
+  cygport ./libical-0.31-X.cygport all
 
 This will create:
-  /usr/src/libical-0.27-X-src.tar.bz2
-  /usr/src/libical-0.27-X.tar.bz2
-  /usr/src/libical-devel-0.27-X.tar.bz2
+  /usr/src/libical-0.31-X-src.tar.bz2
+  /usr/src/libical-0.31-X.tar.bz2
+  /usr/src/libical-devel-0.31-X.tar.bz2
+  /usr/src/libical0-0.31-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary packages:
 
 (libical)
+  /usr/share/doc/libical-0.31/AUTHORS
+  /usr/share/doc/libical-0.31/COPYING
+  /usr/share/doc/libical-0.31/ChangeLog
+  /usr/share/doc/libical-0.31/INSTALL
+  /usr/share/doc/libical-0.31/LICENSE
+  /usr/share/doc/libical-0.31/NEWS
+  /usr/share/doc/libical-0.31/README
+  /usr/share/doc/libical-0.31/THANKS
+  /usr/share/doc/libical-0.31/TODO
+
+(libical0)
   /usr/bin/cygical-0.dll
+  /usr/bin/cygical_cxx-0.dll
   /usr/bin/cygicalss-0.dll
-  /usr/share/doc/Cygwin/libical-0.27.README
-  /usr/share/doc/libical-0.27/AUTHORS
-  /usr/share/doc/libical-0.27/ChangeLog
-  /usr/share/doc/libical-0.27/INSTALL
-  /usr/share/doc/libical-0.27/NEWS
-  /usr/share/doc/libical-0.27/README
-  /usr/share/doc/libical-0.27/THANKS
-  /usr/share/doc/libical-0.27/TODO
-  /usr/share/libical/zoneinfo/Africa/*
-  /usr/share/libical/zoneinfo/America/*
-  /usr/share/libical/zoneinfo/Antarctica/*
-  /usr/share/libical/zoneinfo/Arctic/*
-  /usr/share/libical/zoneinfo/Asia/*
-  /usr/share/libical/zoneinfo/Atlantic/*
-  /usr/share/libical/zoneinfo/Australia/*
-  /usr/share/libical/zoneinfo/Europe/*
-  /usr/share/libical/zoneinfo/Indian/*
-  /usr/share/libical/zoneinfo/Pacific/*
-  /usr/share/libical/zoneinfo/zones.tab
+  /usr/bin/cygicalss_cxx-0.dll
+  /usr/bin/cygicalvcal-0.dll
 
 (libical-devel)
   /usr/include/ical.h
+  /usr/include/icalarray.h
+  /usr/include/icalattach.h
+  /usr/include/icalbdbset.h
+  /usr/include/icalbdbsetimpl.h
   /usr/include/icalcalendar.h
   /usr/include/icalclassify.h
   /usr/include/icalcluster.h
+  /usr/include/icalcomponent.h
+  /usr/include/icalderivedparameter.h
+  /usr/include/icalderivedproperty.h
+  /usr/include/icalderivedvalue.h
   /usr/include/icaldirset.h
   /usr/include/icaldirsetimpl.h
+  /usr/include/icalduration.h
+  /usr/include/icalenums.h
   /usr/include/icalerror.h
   /usr/include/icalfileset.h
   /usr/include/icalfilesetimpl.h
   /usr/include/icalgauge.h
   /usr/include/icalgaugeimpl.h
+  /usr/include/icallangbind.h
   /usr/include/icalmemory.h
   /usr/include/icalmessage.h
+  /usr/include/icalmime.h
+  /usr/include/icalparameter.h
+  /usr/include/icalparameter_cxx.h
+  /usr/include/icalparser.h
+  /usr/include/icalperiod.h
+  /usr/include/icalproperty.h
+  /usr/include/icalproperty_cxx.h
+  /usr/include/icalrecur.h
+  /usr/include/icalrestriction.h
   /usr/include/icalset.h
   /usr/include/icalspanlist.h
   /usr/include/icalss.h
   /usr/include/icalssyacc.h
+  /usr/include/icaltime.h
+  /usr/include/icaltimezone.h
+  /usr/include/icaltypes.h
+  /usr/include/icaltz-util.h
+  /usr/include/icalvalue.h
+  /usr/include/icalvalue_cxx.h
+  /usr/include/icptrholder.h
+  /usr/include/pvl.h
+  /usr/include/sspm.h
+  /usr/include/vcomponent.h
   /usr/lib/libical.a
   /usr/lib/libical.dll.a
   /usr/lib/libical.la
+  /usr/lib/libical_cxx.a
+  /usr/lib/libical_cxx.dll.a
+  /usr/lib/libical_cxx.la
   /usr/lib/libicalss.a
   /usr/lib/libicalss.dll.a
   /usr/lib/libicalss.la
+  /usr/lib/libicalss_cxx.a
+  /usr/lib/libicalss_cxx.dll.a
+  /usr/lib/libicalss_cxx.la
+  /usr/lib/libicalvcal.a
+  /usr/lib/libicalvcal.dll.a
+  /usr/lib/libicalvcal.la
 
 ------------------
 
 Port Notes:
+
+----- version 0.31-1 -----
+Version bump.
 
 ----- version 0.27-1 -----
 Initial release for Cygwin.
