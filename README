@@ -7,16 +7,15 @@ component properties, parameters, and subcomponents.
 
 Runtime requirements:
   cygwin-1.5.25-11
-  libdb4.0-4.0.14-2
   tzcode
 
 Build requirements:
   autoconf2.5-2.61-1
   automake1.9-1.9.6-2
-  binutils-20060817-1
+  binutils-20080624-2
   bison-2.3-1
-  cygport-0.3.9-1
-  flex-2.5.34-1
+  cygport-0.4.0-1
+  flex-2.5.35-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
@@ -33,32 +32,21 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libical-0.31-X-src.tar.bz2
+  unpack libical-0.33-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libical-0.31-X.cygport all
+  cygport ./libical-0.33-X.cygport all
 
 This will create:
-  /usr/src/libical-0.31-X-src.tar.bz2
-  /usr/src/libical-0.31-X.tar.bz2
-  /usr/src/libical-devel-0.31-X.tar.bz2
-  /usr/src/libical0-0.31-X.tar.bz2
+  /usr/src/libical-0.33-X-src.tar.bz2
+  /usr/src/libical-0.33-X.tar.bz2
+  /usr/src/libical-devel-0.33-X.tar.bz2
+  /usr/src/libical0-0.33-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary packages:
-
-(libical)
-  /usr/share/doc/libical-0.31/AUTHORS
-  /usr/share/doc/libical-0.31/COPYING
-  /usr/share/doc/libical-0.31/ChangeLog
-  /usr/share/doc/libical-0.31/INSTALL
-  /usr/share/doc/libical-0.31/LICENSE
-  /usr/share/doc/libical-0.31/NEWS
-  /usr/share/doc/libical-0.31/README
-  /usr/share/doc/libical-0.31/THANKS
-  /usr/share/doc/libical-0.31/TODO
 
 (libical0)
   /usr/bin/cygical-0.dll
@@ -66,55 +54,68 @@ Files included in the binary packages:
   /usr/bin/cygicalss-0.dll
   /usr/bin/cygicalss_cxx-0.dll
   /usr/bin/cygicalvcal-0.dll
+  /usr/share/doc/libical-0.33/AUTHORS
+  /usr/share/doc/libical-0.33/COPYING
+  /usr/share/doc/libical-0.33/ChangeLog
+  /usr/share/doc/libical-0.33/INSTALL
+  /usr/share/doc/libical-0.33/LICENSE
+  /usr/share/doc/libical-0.33/NEWS
+  /usr/share/doc/libical-0.33/README
+  /usr/share/doc/libical-0.33/THANKS
+  /usr/share/doc/libical-0.33/TODO
 
 (libical-devel)
   /usr/include/ical.h
-  /usr/include/icalarray.h
-  /usr/include/icalattach.h
-  /usr/include/icalbdbset.h
-  /usr/include/icalbdbsetimpl.h
-  /usr/include/icalcalendar.h
-  /usr/include/icalclassify.h
-  /usr/include/icalcluster.h
-  /usr/include/icalcomponent.h
-  /usr/include/icalderivedparameter.h
-  /usr/include/icalderivedproperty.h
-  /usr/include/icalderivedvalue.h
-  /usr/include/icaldirset.h
-  /usr/include/icaldirsetimpl.h
-  /usr/include/icalduration.h
-  /usr/include/icalenums.h
-  /usr/include/icalerror.h
-  /usr/include/icalfileset.h
-  /usr/include/icalfilesetimpl.h
-  /usr/include/icalgauge.h
-  /usr/include/icalgaugeimpl.h
-  /usr/include/icallangbind.h
-  /usr/include/icalmemory.h
-  /usr/include/icalmessage.h
-  /usr/include/icalmime.h
-  /usr/include/icalparameter.h
-  /usr/include/icalparameter_cxx.h
-  /usr/include/icalparser.h
-  /usr/include/icalperiod.h
-  /usr/include/icalproperty.h
-  /usr/include/icalproperty_cxx.h
-  /usr/include/icalrecur.h
-  /usr/include/icalrestriction.h
-  /usr/include/icalset.h
-  /usr/include/icalspanlist.h
-  /usr/include/icalss.h
-  /usr/include/icalssyacc.h
-  /usr/include/icaltime.h
-  /usr/include/icaltimezone.h
-  /usr/include/icaltypes.h
-  /usr/include/icaltz-util.h
-  /usr/include/icalvalue.h
-  /usr/include/icalvalue_cxx.h
-  /usr/include/icptrholder.h
-  /usr/include/pvl.h
-  /usr/include/sspm.h
-  /usr/include/vcomponent.h
+  /usr/include/libical/ical.h
+  /usr/include/libical/icalarray.h
+  /usr/include/libical/icalattach.h
+  /usr/include/libical/icalcalendar.h
+  /usr/include/libical/icalclassify.h
+  /usr/include/libical/icalcluster.h
+  /usr/include/libical/icalcomponent.h
+  /usr/include/libical/icalderivedparameter.h
+  /usr/include/libical/icalderivedproperty.h
+  /usr/include/libical/icalderivedvalue.h
+  /usr/include/libical/icaldirset.h
+  /usr/include/libical/icaldirsetimpl.h
+  /usr/include/libical/icalduration.h
+  /usr/include/libical/icalenums.h
+  /usr/include/libical/icalerror.h
+  /usr/include/libical/icalfileset.h
+  /usr/include/libical/icalfilesetimpl.h
+  /usr/include/libical/icalgauge.h
+  /usr/include/libical/icalgaugeimpl.h
+  /usr/include/libical/icallangbind.h
+  /usr/include/libical/icalmemory.h
+  /usr/include/libical/icalmessage.h
+  /usr/include/libical/icalmime.h
+  /usr/include/libical/icalparameter.h
+  /usr/include/libical/icalparameter_cxx.h
+  /usr/include/libical/icalparser.h
+  /usr/include/libical/icalperiod.h
+  /usr/include/libical/icalproperty.h
+  /usr/include/libical/icalproperty_cxx.h
+  /usr/include/libical/icalrecur.h
+  /usr/include/libical/icalrestriction.h
+  /usr/include/libical/icalset.h
+  /usr/include/libical/icalspanlist.h
+  /usr/include/libical/icalss.h
+  /usr/include/libical/icalssyacc.h
+  /usr/include/libical/icaltime.h
+  /usr/include/libical/icaltimezone.h
+  /usr/include/libical/icaltypes.h
+  /usr/include/libical/icaltz-util.h
+  /usr/include/libical/icalvalue.h
+  /usr/include/libical/icalvalue_cxx.h
+  /usr/include/libical/icptrholder.h
+  /usr/include/libical/pvl.h
+  /usr/include/libical/sspm.h
+  /usr/include/libical/vcomponent.h
+  /usr/include/libicalvcal/icalvcal.h
+  /usr/include/libicalvcal/port.h
+  /usr/include/libicalvcal/vcaltmp.h
+  /usr/include/libicalvcal/vcc.h
+  /usr/include/libicalvcal/vobject.h
   /usr/lib/libical.a
   /usr/lib/libical.dll.a
   /usr/lib/libical.la
@@ -130,10 +131,14 @@ Files included in the binary packages:
   /usr/lib/libicalvcal.a
   /usr/lib/libicalvcal.dll.a
   /usr/lib/libicalvcal.la
+  /usr/lib/pkgconfig/libical.pc
 
 ------------------
 
 Port Notes:
+
+----- version 0.33-1 -----
+Version bump.
 
 ----- version 0.31-1 -----
 Version bump.

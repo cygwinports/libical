@@ -1,0 +1,19 @@
+--- origsrc/libical-0.33/src/libicalss/Makefile.am	2008-09-04 09:46:30.000000000 -0500
++++ src/libical-0.33/src/libicalss/Makefile.am	2008-09-24 21:40:07.074975400 -0500
+@@ -64,7 +64,7 @@
+ 	$(BDB_INCLUDE)
+ 
+ libicalss_la_LDFLAGS = -version-info 32:0:32
+-libicalss_la_LIBADD = $(BDB_LIBFILES) 
++libicalss_la_LIBADD = $(BDB_LIBFILES) ../libical/libical.la
+ 
+ if DEV
+ libicalss_la_DEVSOURCES = icalsslexer.l icalssyacc.y
+@@ -114,6 +114,7 @@
+ 	$(srcdir)/icalmessage.h
+ 
+ if WITH_CXX_BINDINGS
++libicalss_cxx_la_LIBADD = libicalss.la ../libical/libical_cxx.la
+ libicalss_cxx_la_SOURCES =	\
+ 	$(libicalss_evolution_la_SOURCES)	\
+ 	icalspanlist_cxx.h	\

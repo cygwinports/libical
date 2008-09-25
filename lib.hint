@@ -1,5 +1,5 @@
 category: Libs
-requires: cygwin libdb4.0 tzcode
+requires: cygwin tzcode
 external-source: libical
 sdesc: "iCalendar library (runtime)"
 ldesc: "Libical is an Open Source implementation of the IETF's iCalendar 
