@@ -1,15 +1,14 @@
 DESCRIPTION="iCalendar calendar/schedule library"
 HOMEPAGE="http://www.softwarestudio.org/softwarestudio/app.php/libical"
 SRC_URI="mirror://sourceforge/freeassociation/${P}.tar.gz"
-PATCH_URI="0.33-no-undefined.patch
-           0.33-test-cxx.patch"
+PATCH_URI="0.41-no-undefined.patch
+           0.41-icalspanlist_cxx-guards.patch"
 
-abi=0
-PKG_NAMES="${PN} ${PN}${abi} ${PN}-devel"
+PKG_NAMES="${PN} ${PN}0 ${PN}-devel"
 PKG_HINTS="setup lib devel"
-PKG_CONTENTS[0]=	# empty
-PKG_CONTENTS[1]="usr/bin/*-${abi}.dll usr/share/doc/"
-PKG_CONTENTS[2]='usr/include/ usr/lib/'
+libical_CONTENTS=	# empty
+libical0_CONTENTS="usr/bin/cygical*-0.dll usr/share/doc/"
+libical_devel_CONTENTS='usr/include/ usr/lib/'
 
 DIFF_EXCLUDES="Makefile icalsslexer.c"
 
