@@ -1,7 +1,7 @@
 DESCRIPTION="iCalendar calendar/schedule library"
 HOMEPAGE="http://www.softwarestudio.org/softwarestudio/app.php/libical"
 SRC_URI="mirror://sourceforge/freeassociation/${P}.tar.gz"
-PATCH_URI="0.42-no-undefined.patch
+PATCH_URI="0.43-no-undefined.patch
            0.41-icalspanlist_cxx-guards.patch"
 
 PKG_NAMES="${PN} ${PN}0 ${PN}-devel"

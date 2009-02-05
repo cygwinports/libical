@@ -14,7 +14,7 @@ Build requirements:
   automake1.9-1.9.6-3
   binutils-20080624-2
   bison-2.3-1
-  cygport-0.4.2-1
+  cygport-0.4.3-1
   flex-2.5.35-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
@@ -32,16 +32,16 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libical-0.42-X-src.tar.bz2
+  unpack libical-0.43-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libical-0.42-X.cygport all
+  cygport ./libical-0.43-X.cygport all
 
 This will create:
-  /usr/src/libical-0.42-X-src.tar.bz2
-  /usr/src/libical-devel-0.42-X.tar.bz2
-  /usr/src/libical0-0.42-X.tar.bz2
+  /usr/src/libical-0.43-X-src.tar.bz2
+  /usr/src/libical-devel-0.43-X.tar.bz2
+  /usr/src/libical0-0.43-X.tar.bz2
 
 -------------------------------------------
 
@@ -53,15 +53,15 @@ Files included in the binary packages:
   /usr/bin/cygicalss-0.dll
   /usr/bin/cygicalss_cxx-0.dll
   /usr/bin/cygicalvcal-0.dll
-  /usr/share/doc/libical-0.42/AUTHORS
-  /usr/share/doc/libical-0.42/COPYING
-  /usr/share/doc/libical-0.42/ChangeLog
-  /usr/share/doc/libical-0.42/INSTALL
-  /usr/share/doc/libical-0.42/LICENSE
-  /usr/share/doc/libical-0.42/NEWS
-  /usr/share/doc/libical-0.42/README
-  /usr/share/doc/libical-0.42/THANKS
-  /usr/share/doc/libical-0.42/TODO
+  /usr/share/doc/libical-0.43/AUTHORS
+  /usr/share/doc/libical-0.43/COPYING
+  /usr/share/doc/libical-0.43/ChangeLog
+  /usr/share/doc/libical-0.43/INSTALL
+  /usr/share/doc/libical-0.43/LICENSE
+  /usr/share/doc/libical-0.43/NEWS
+  /usr/share/doc/libical-0.43/README
+  /usr/share/doc/libical-0.43/THANKS
+  /usr/share/doc/libical-0.43/TODO
 
 (libical-devel)
   /usr/include/ical.h
@@ -135,6 +135,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 0.43-1 -----
+Version bump.
 
 ----- version 0.42-1 -----
 Version bump.
