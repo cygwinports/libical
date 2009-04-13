@@ -1,7 +1,7 @@
 category: Libs
-requires: cygwin tzcode
+requires: cygwin libgcc1 tzcode
 external-source: libical
-sdesc: "iCalendar library (runtime)"
+sdesc: "iCalendar library (C runtime)"
 ldesc: "Libical is an Open Source implementation of the IETF's iCalendar 
 Calendaring and Scheduling protocols. (RFC 2445, 2446, and 2447). It 
 parses iCal components and provides a C API for manipulating the 

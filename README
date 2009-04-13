@@ -6,21 +6,23 @@ parses iCal components and provides a C API for manipulating the
 component properties, parameters, and subcomponents.
 
 Runtime requirements:
-  cygwin-1.5.25-15
+  cygwin-1.7.0-45
+  libgcc1-4.3.2-2
+  libstdc++6-4.3.2-2
   tzcode
 
 Build requirements:
-  autoconf2.5-2.63-1
-  automake1.9-1.9.6-3
+  autoconf2.5-2.63-10
+  automake1.9-1.9.6-10
   binutils-20080624-2
   bison-2.3-1
-  cygport-0.4.3-1
+  cygport-0.9.6-1
   flex-2.5.35-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  gcc-g++-3.4.4-3
-  libtool-2.2.6a-1
-  make-3.81-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  gcc4-g++-4.3.2-2
+  libtool-2.2.7a-12
+  make-3.81-2
   sed-4.1.5-2
 
 Canonical website:
@@ -41,6 +43,8 @@ Build instructions:
 This will create:
   /usr/src/libical-0.43-X-src.tar.bz2
   /usr/src/libical-devel-0.43-X.tar.bz2
+  /usr/src/libical_cxx-devel-0.43-X.tar.bz2
+  /usr/src/libical_cxx0-0.43-X.tar.bz2
   /usr/src/libical0-0.43-X.tar.bz2
 
 -------------------------------------------
@@ -49,9 +53,7 @@ Files included in the binary packages:
 
 (libical0)
   /usr/bin/cygical-0.dll
-  /usr/bin/cygical_cxx-0.dll
   /usr/bin/cygicalss-0.dll
-  /usr/bin/cygicalss_cxx-0.dll
   /usr/bin/cygicalvcal-0.dll
   /usr/share/doc/libical-0.43/AUTHORS
   /usr/share/doc/libical-0.43/COPYING
@@ -62,6 +64,10 @@ Files included in the binary packages:
   /usr/share/doc/libical-0.43/README
   /usr/share/doc/libical-0.43/THANKS
   /usr/share/doc/libical-0.43/TODO
+
+(libical_cxx0)
+  /usr/bin/cygical_cxx-0.dll
+  /usr/bin/cygicalss_cxx-0.dll
 
 (libical-devel)
   /usr/include/ical.h
@@ -89,11 +95,9 @@ Files included in the binary packages:
   /usr/include/libical/icalmessage.h
   /usr/include/libical/icalmime.h
   /usr/include/libical/icalparameter.h
-  /usr/include/libical/icalparameter_cxx.h
   /usr/include/libical/icalparser.h
   /usr/include/libical/icalperiod.h
   /usr/include/libical/icalproperty.h
-  /usr/include/libical/icalproperty_cxx.h
   /usr/include/libical/icalrecur.h
   /usr/include/libical/icalrestriction.h
   /usr/include/libical/icalset.h
@@ -105,7 +109,6 @@ Files included in the binary packages:
   /usr/include/libical/icaltypes.h
   /usr/include/libical/icaltz-util.h
   /usr/include/libical/icalvalue.h
-  /usr/include/libical/icalvalue_cxx.h
   /usr/include/libical/icptrholder.h
   /usr/include/libical/pvl.h
   /usr/include/libical/sspm.h
@@ -118,41 +121,31 @@ Files included in the binary packages:
   /usr/lib/libical.a
   /usr/lib/libical.dll.a
   /usr/lib/libical.la
-  /usr/lib/libical_cxx.a
-  /usr/lib/libical_cxx.dll.a
-  /usr/lib/libical_cxx.la
   /usr/lib/libicalss.a
   /usr/lib/libicalss.dll.a
   /usr/lib/libicalss.la
-  /usr/lib/libicalss_cxx.a
-  /usr/lib/libicalss_cxx.dll.a
-  /usr/lib/libicalss_cxx.la
   /usr/lib/libicalvcal.a
   /usr/lib/libicalvcal.dll.a
   /usr/lib/libicalvcal.la
   /usr/lib/pkgconfig/libical.pc
 
+(libical_cxx-devel)
+  /usr/include/libical/icalparameter_cxx.h
+  /usr/include/libical/icalproperty_cxx.h
+  /usr/include/libical/icalvalue_cxx.h
+  /usr/lib/libical_cxx.a
+  /usr/lib/libical_cxx.dll.a
+  /usr/lib/libical_cxx.la
+  /usr/lib/libicalss_cxx.a
+  /usr/lib/libicalss_cxx.dll.a
+  /usr/lib/libicalss_cxx.la
+
 ------------------
 
 Port Notes:
 
------ version 0.43-1 -----
-Version bump.
-
------ version 0.42-1 -----
-Version bump.
-
------ version 0.41-1 -----
-Version bump.
-
------ version 0.33-1 -----
-Version bump.
-
------ version 0.31-1 -----
-Version bump.
-
------ version 0.27-1 -----
-Initial release for Cygwin.
+----- version 0.43-10 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:
