@@ -1,5 +1,5 @@
 category: Libs
-requires: cygwin libical_cxx0 libical-devel libstdc++6-devel
+requires: libical_cxx0 libical-devel libstdc++6-devel
 external-source: libical
 sdesc: "iCalendar library (C++ development)"
 ldesc: "Libical is an Open Source implementation of the IETF's iCalendar 
