@@ -1,0 +1,31 @@
+NAME="libical"
+VERSION=1.0
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="iCalendar library"
+DESCRIPTION="Libical is an Open Source implementation of the IETF's iCalendar
+Calendaring and Scheduling protocols. (RFC 2445, 2446, and 2447). It parses
+iCal components and provides a C API for manipulating the component properties,
+parameters, and subcomponents."
+HOMEPAGE="http://freeassociation.sourceforge.net/"
+SRC_URI="mirror://sourceforge/freeassociation/libical-${VERSION}.tar.gz"
+PATCH_URI="0.44-no-undefined.patch
+           0.41-icalspanlist_cxx-guards.patch"
+
+PKG_NAMES="${NAME}0 ${NAME}-devel ${NAME}_cxx0 ${NAME}_cxx-devel"
+libical0_CONTENTS="--exclude=*_cxx* usr/bin/cygical*-0.dll usr/share/doc/"
+libical_devel_CONTENTS='--exclude=*_cxx* usr/include/ usr/lib/'
+libical_cxx0_SUMMARY="${SUMMARY} (C++ interface)"
+libical_cxx0_CONTENTS="usr/bin/cygical*cxx-0.dll"
+libical_cxx_devel_SUMMARY="${SUMMARY} (C++ interface)"
+libical_cxx_devel_CONTENTS="usr/include/libical/*_cxx.h usr/lib/lib*_cxx.*"
+
+DIFF_EXCLUDES="Makefile icalsslexer.c"
+
+# bdb4 code contains unresolved symbols
+CYGCONF_ARGS="
+	--enable-cxx
+	--enable-reentrant
+	--without-builtintz
+"
+MAKEOPTS+=" LDFLAGS=-no-undefined"
