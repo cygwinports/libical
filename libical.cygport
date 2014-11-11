@@ -13,6 +13,7 @@ PATCH_URI="0.44-no-undefined.patch
            0.41-icalspanlist_cxx-guards.patch"
 
 PKG_NAMES="${NAME}0 ${NAME}-devel ${NAME}_cxx0 ${NAME}_cxx-devel"
+libical0_REQUIRES="tzcode"
 libical0_CONTENTS="--exclude=*_cxx* usr/bin/cygical*-0.dll usr/share/doc/"
 libical_devel_CONTENTS='--exclude=*_cxx* usr/include/ usr/lib/'
 libical_cxx0_SUMMARY="${SUMMARY} (C++ interface)"
