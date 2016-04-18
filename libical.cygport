@@ -13,7 +13,7 @@ HOMEPAGE="https://libical.github.io/libical/"
 SRC_URI="https://github.com/libical/libical/archive/v${VERSION}/libical-v${VERSION}.tar.gz"
 
 PKG_NAMES="${NAME}1 ${NAME}-devel"
-libical1_REQUIRES="tzcode"
+libical1_REQUIRES="tzdata"
 libical1_CONTENTS="usr/bin/cygical*-1.dll usr/share/doc/"
 libical_devel_CONTENTS="
 	usr/include/ical.h
