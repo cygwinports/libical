@@ -1,7 +1,7 @@
 inherit cmake
 
 NAME="libical"
-VERSION=1.0.1
+VERSION=2.0.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="iCalendar library"
@@ -11,12 +11,17 @@ iCal components and provides a C API for manipulating the component properties,
 parameters, and subcomponents."
 HOMEPAGE="https://libical.github.io/libical/"
 SRC_URI="https://github.com/libical/libical/archive/v${VERSION}/libical-v${VERSION}.tar.gz"
+PATCH_URI="
+	https://src.fedoraproject.org/rpms/libical/raw/f27/f/libical-2.0.0-arm.patch
+	https://src.fedoraproject.org/rpms/libical/raw/f27/f/libical-2.0.0-funcnamefix.patch
+	https://src.fedoraproject.org/rpms/libical/raw/f27/f/libical-2.0.0-rscale-use-after-free.patch
+	https://src.fedoraproject.org/rpms/libical/raw/f27/f/libical-2.0.0-zic-qtbug-workaround-fix.patch
+"
 
-PKG_NAMES="${NAME}1 ${NAME}-devel"
-libical1_REQUIRES="tzdata"
-libical1_CONTENTS="usr/bin/cygical*-1.dll usr/share/doc/"
+PKG_NAMES="${NAME}2 ${NAME}-devel"
+libical2_REQUIRES="tzdata"
+libical2_CONTENTS="usr/bin/cygical*-2.dll usr/share/doc/"
 libical_devel_CONTENTS="
-	usr/include/ical.h
 	usr/include/libical/
 	usr/lib/cmake/LibIcal/
 	usr/lib/libical*.dll.a
@@ -27,4 +32,6 @@ CYGCMAKE_ARGS="
 	-DBIN_INSTALL_DIR=/usr/bin
 	-DSHARED_ONLY=ON
 	-DUSE_BUILTIN_TZDATA=OFF
+	-DUSE_INTEROPERABLE_VTIMEZONES=ON
+	-DICAL_ALLOW_EMPTY_PROPERTIES=ON
 "
