@@ -2,7 +2,7 @@ inherit cmake
 
 NAME="libical"
 VERSION=2.0.0
-RELEASE=1
+RELEASE=2
 CATEGORY="Libs"
 SUMMARY="iCalendar library"
 DESCRIPTION="Libical is an Open Source implementation of the IETF's iCalendar
